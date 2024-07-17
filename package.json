@@ -1,13 +1,14 @@
 {
   "name": "rootie",
   "version": "1.0.0",
-  "description": "",
+  "description": "Rootie è un'applicazione per la gestione e la visualizzazione della struttura delle directory, progettata per offrire una rappresentazione visiva chiara e dettagliata della gerarchia dei file nel tuo sistema.",
   "type": "module",
   "main": "index.mjs",
   "scripts": {
     "start": "node ./src/index.mjs",
-    "build": "nexe ./src/index.mjs -o dist/index.exe",
-    "clean": "rimraf dist",
+    "build-windows": "", // TODO Creare pacchetto distribuzione
+    "build-linux": "", // TODO Creare pacchetto distribuzione
+    "build-macos": "", // TODO Creare pacchetto distribuzione
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
