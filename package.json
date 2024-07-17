@@ -1,0 +1,28 @@
+{
+  "name": "rootie",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node ./src/index.mjs",
+    "build": "nexe ./src/index.mjs -o dist/index.exe",
+    "clean": "rimraf dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "dependencies": {
+    "chalk": "5.3.0",
+    "clipboardy": "^4.0.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^8.2.4",
+    "strip-ansi": "7.1.0"
+  },
+  "author": "Sladix784",
+  "license": "ISC",
+  "nexe": {
+    "input": "./src/index.mjs",
+    "output": "./dist/index.exe",
+    "icon": "./src/assets/icon-ico/rootie-icon256.ico"
+  }
+}
