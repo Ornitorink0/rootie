@@ -6,9 +6,9 @@
   "main": "index.mjs",
   "scripts": {
     "start": "node ./src/index.mjs",
-    "build-windows": "", // TODO Creare pacchetto distribuzione
-    "build-linux": "", // TODO Creare pacchetto distribuzione
-    "build-macos": "", // TODO Creare pacchetto distribuzione
+    "build-windows": "",
+    "build-linux": "",
+    "build-macos": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -2,6 +2,50 @@
 
 Rootie è un'applicazione per la gestione e la visualizzazione della struttura delle directory, progettata per offrire una rappresentazione visiva chiara e dettagliata della gerarchia dei file nel tuo sistema.
 
+Esempio:
+
+```plaintext
+├── 📄 directory_structure.txt
+├── 📁 dist-windows
+│   └── 💻 index.exe
+├── 📁 node_modules
+│   ├── ...
+├── 📄 package-lock.json
+├── 📄 package.json
+├── 📁 src
+│   ├── 📁 assets
+│   │   ├── 📁 icon-ico
+│   │   │   ├── 📄 rootie-icon128.ico
+│   │   │   ├── 📄 rootie-icon16.ico
+│   │   │   ├── 📄 rootie-icon256.ico
+│   │   │   ├── 📄 rootie-icon32.ico
+│   │   │   ├── 📄 rootie-icon48.ico
+│   │   │   └── 📄 rootie-icon72.ico
+│   │   ├── 📁 icon-png
+│   │   │   ├── 🖼️ rootie-icon1024.png
+│   │   │   ├── 🖼️ rootie-icon128.png
+│   │   │   ├── 🖼️ rootie-icon16.png
+│   │   │   ├── 🖼️ rootie-icon256.png
+│   │   │   ├── 🖼️ rootie-icon32.png
+│   │   │   ├── 🖼️ rootie-icon48.png
+│   │   │   ├── 🖼️ rootie-icon512.png
+│   │   │   └── 🖼️ rootie-icon64.png
+│   │   └── 📁 icon-svg
+│   │       ├── 🖼️ rootie-icon1024.svg
+│   │       ├── 🖼️ rootie-icon128.svg
+│   │       ├── 🖼️ rootie-icon16.svg
+│   │       ├── 🖼️ rootie-icon256.svg
+│   │       ├── 🖼️ rootie-icon32.svg
+│   │       ├── 🖼️ rootie-icon48.svg
+│   │       ├── 🖼️ rootie-icon512.svg
+│   │       └── 🖼️ rootie-icon64.svg
+│   ├── 📄 icons.mjs
+│   ├── 📄 index.mjs
+│   └── 📄 specialfiles.mjs
+└── 🌐 test.html
+
+```
+
 ## Caratteristiche
 
 - **Visualizzazione Gerarchica**: Mostra la struttura delle directory utilizzando simboli grafici per una visualizzazione intuitiva.
