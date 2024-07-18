@@ -3,6 +3,8 @@
 ## TODO
 
 * [ ] Option to toggle color output in directory tree.
+* [ ] Option to hide a certain folder (if it exists).
+* [ ] Option to decide the name of the file to save and the path where it should be located.
 * [ ] Improved error handling with descriptive messages.
 * [ ] Support for symbolic links in the directory structure.
 * [ ] Ability to customize icons and colors via configuration file.
