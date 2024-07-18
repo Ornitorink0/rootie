@@ -1,95 +1,84 @@
 # Rootie
 
-Rootie è un'applicazione per la gestione e la visualizzazione della struttura delle directory, progettata per offrire una rappresentazione visiva chiara e dettagliata della gerarchia dei file nel tuo sistema.
+**Rootie** is an innovative CLI application made with Node.JS designed to visualize the structure of a chosen directory. With a user-friendly UI that utilizes vibrant colors and emojis, Rootie enhances visibility and easily distinguishes common design files.
 
-Esempio:
+Additionally, the app offers practical features such as clipboard saving and exporting to a text file, simplifying the process of documenting file structures.
 
-```plaintext
-├── 📄 directory_structure.txt
-├── 📁 dist-windows
-│   └── 💻 index.exe
-├── 📁 node_modules
-│   ├── ...
-├── 📄 package-lock.json
-├── 📄 package.json
-├── 📁 src
-│   ├── 📁 assets
-│   │   ├── 📁 icon-ico
-│   │   │   ├── 📄 rootie-icon128.ico
-│   │   │   ├── 📄 rootie-icon16.ico
-│   │   │   ├── 📄 rootie-icon256.ico
-│   │   │   ├── 📄 rootie-icon32.ico
-│   │   │   ├── 📄 rootie-icon48.ico
-│   │   │   └── 📄 rootie-icon72.ico
-│   │   ├── 📁 icon-png
-│   │   │   ├── 🖼️ rootie-icon1024.png
-│   │   │   ├── 🖼️ rootie-icon128.png
-│   │   │   ├── 🖼️ rootie-icon16.png
-│   │   │   ├── 🖼️ rootie-icon256.png
-│   │   │   ├── 🖼️ rootie-icon32.png
-│   │   │   ├── 🖼️ rootie-icon48.png
-│   │   │   ├── 🖼️ rootie-icon512.png
-│   │   │   └── 🖼️ rootie-icon64.png
-│   │   └── 📁 icon-svg
-│   │       ├── 🖼️ rootie-icon1024.svg
-│   │       ├── 🖼️ rootie-icon128.svg
-│   │       ├── 🖼️ rootie-icon16.svg
-│   │       ├── 🖼️ rootie-icon256.svg
-│   │       ├── 🖼️ rootie-icon32.svg
-│   │       ├── 🖼️ rootie-icon48.svg
-│   │       ├── 🖼️ rootie-icon512.svg
-│   │       └── 🖼️ rootie-icon64.svg
-│   ├── 📄 icons.mjs
-│   ├── 📄 index.mjs
-│   └── 📄 specialfiles.mjs
-└── 🌐 test.html
+## Features
 
-```
+- **Icon Management**: Easily manage different icon formats including ICO, PNG, and SVG.
+- **File Handling**: Handle special files with specific requirements.
+- **Cross-Platform Builds**: Create executable files for Windows, Linux, and macOS.
 
-## Caratteristiche
+## Installation
 
-- **Visualizzazione Gerarchica**: Mostra la struttura delle directory utilizzando simboli grafici per una visualizzazione intuitiva.
-- **Colorazione Personalizzata**: Colori differenti per identificare facilmente tipi diversi di file e cartelle.
-- **Supporto per Più Piattaforme**: Funziona su Windows, macOS e Linux.
-- **Facile Navigazione**: Naviga attraverso le directory principali e i file speciali con facilità.
+1. **Clone the repository**:
 
-## Installazione
-
-Per installare Rootie, segui questi passaggi:
-
-1. Clona il repository o scarica il codice sorgente.
-
-   ```bash
-   git clone https://github.com/tuonome/rootie.git
+   ```sh
+   git clone https://github.com/Ornitorink0/rootie.git
    cd rootie
    ```
-2. Installa le dipendenze utilizzando npm (Node.js Package Manager).
+2. **Install dependencies**:
 
-   ```bash
+   ```sh
    npm install
    ```
 
-## Utilizzo
+## Usage
 
-Dopo aver installato le dipendenze, puoi eseguire Rootie direttamente da riga di comando.
+### Start the Application
 
-```bash
-npm start
+To start the application in development mode, run:
+
+```sh
+npm run start
 ```
 
-Questo comando avvierà l'applicazione e visualizzerà la struttura delle directory sul tuo terminale.
+### Compile the Application
 
-## Comandi Disponibili
+To unify all the code into one file, run:
 
-- `npm start`: Avvia l'applicazione Rootie.
-- `npm run build-windows`: Compila l'applicazione per Windows.
-- `npm run build-linux`: Compila l'applicazione per Linux.
-- `npm run build-macos`: Compila l'applicazione per macOS.
+```sh
+npm run build
+```
 
-## Contributi
+### Usage tips
 
-Le segnalazioni di bug e le richieste di funzionalità sono benvenute. Per favore, apri un problema nel repository se hai delle domande o dei suggerimenti.
+If it helps, create a `.bat` extension file and register it in the PATH. Add the following code inside it (to be modified according to your needs):
 
-## Licenza
+```sh
+@echo off
+:: edit with the relative path to the file
+node path\to\your\directory\index.mjs %*
+```
 
-Questo progetto è sotto licenza ISC. Per maggiori informazioni, consulta il file `LICENSE`.
+## Project Structure
+
+```
+rootie/
+├── dist/        	 # Unified file directory
+├── node_modules/        # Project dependencies
+├── src/                 # Source files
+│   ├── assets/          # Icon assets
+│   ├── icons.mjs        # Icon management script
+│   ├── index.mjs        # Main entry point
+│   └── specialfiles.mjs # Special file handling script
+├── package.json         # Project metadata and scripts
+└── README.md            # Project documentation
+```
+
+## Dependencies
+
+- [chalk](https://www.npmjs.com/package/chalk): Terminal string styling.
+- [clipboardy](https://www.npmjs.com/package/clipboardy): Access the system clipboard.
+- [fs-extra](https://www.npmjs.com/package/fs-extra): File system operations.
+- [inquirer](https://www.npmjs.com/package/inquirer): Command line user interfaces.
+- [strip-ansi](https://www.npmjs.com/package/strip-ansi): Strip ANSI escape codes.
+
+## Contributing
+
+Contributions are welcome! Please create a pull request with a clear description of your changes.
+
+## License
+
+This project is licensed under the ISC License.

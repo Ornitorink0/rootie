@@ -6,7 +6,7 @@ import chalk from 'chalk';
 import { ICONS } from './icons.mjs';
 import { specialFiles } from './specialfiles.mjs';
 
-// Definizione dei colori per i vari tipi di file
+// Define colors for different file types
 const colors = {
     directory: chalk.blue,
     hidden_file: chalk.grey,
@@ -14,18 +14,18 @@ const colors = {
 };
 
 /**
- * Ottiene l'icona corrispondente per il tipo di file.
- * @param {string} fileType - Tipo di file o estensione del file.
- * @returns {string} Icona corrispondente.
+ * Gets the corresponding icon for the file type.
+ * @param {string} fileType - Type of file or file extension.
+ * @returns {string} Corresponding icon.
  */
 const getIcon = (fileType) => ICONS[fileType] || ICONS.file;
 
 /**
- * Stampa la struttura della directory ricorsivamente con icone e colori.
- * @param {string} rootDir - Directory radice da esplorare.
- * @param {string} [prefix=''] - Prefisso da aggiungere a ogni riga di output.
- * @param {boolean} [colored=false] - Se true, applica colori al testo.
- * @returns {string} Output della struttura della directory.
+ * Prints the directory structure recursively with icons and colors.
+ * @param {string} rootDir - Root directory to explore.
+ * @param {string} [prefix=''] - Prefix to add to each line of output.
+ * @param {boolean} [colored=false] - If true, apply colors to text.
+ * @returns {string} Output of the directory structure.
  */
 const printDirectoryTree = (rootDir, prefix = '', colored = false) => {
     let output = '';
@@ -36,7 +36,7 @@ const printDirectoryTree = (rootDir, prefix = '', colored = false) => {
             const itemPath = path.join(rootDir, item);
             const isLast = i === items.length - 1;
             let icon = getIcon('file');
-            let colorize = (text) => text; // Funzione di default per non colorare
+            let colorize = (text) => text; // Default function for no coloring
 
             if (fs.statSync(itemPath).isDirectory()) {
                 icon = getIcon('directory');
@@ -48,7 +48,7 @@ const printDirectoryTree = (rootDir, prefix = '', colored = false) => {
                 const ext = path.extname(item).toLowerCase();
                 icon = getIcon(ext);
             }
-            
+
             if (specialFiles.includes(item.toUpperCase()) || specialFiles.includes(item)) {
                 colorize = colors.special_file;
                 icon = getIcon(item.toUpperCase());
@@ -66,13 +66,13 @@ const printDirectoryTree = (rootDir, prefix = '', colored = false) => {
             }
         });
     } catch (error) {
-        console.error(chalk.red(`Errore: ${error.message}`));
+        console.error(chalk.red(`Error: ${error.message}`));
     }
     return output;
 };
 
 /**
- * Funzione principale che gestisce l'interazione con l'utente tramite Inquirer.
+ * Main function that handles user interaction via Inquirer.
  */
 const main = async () => {
     try {
@@ -80,16 +80,16 @@ const main = async () => {
             {
                 type: 'input',
                 name: 'directory',
-                message: 'Inserisci la directory da elencare',
+                message: 'Enter the directory to list',
                 default: '.',
             },
         ]);
 
         if (!fs.existsSync(directory) || !fs.statSync(directory).isDirectory()) {
-            throw new Error(`Directory non valida: '${directory}' non è una directory`);
+            throw new Error(`Invalid directory: '${directory}' is not a directory`);
         }
 
-        console.log(`\n🌳 Struttura della directory '${directory}':\n`);
+        console.log(`\n🌳 Directory structure of '${directory}':\n`);
         const directoryStructure = printDirectoryTree(directory, '', true);
         console.log(directoryStructure);
 
@@ -97,29 +97,29 @@ const main = async () => {
             {
                 type: 'list',
                 name: 'action',
-                message: 'Scegli un\'azione:',
+                message: 'Choose an action:',
                 choices: [
-                    { name: 'Copia il testo del risultato', value: 'copy' },
-                    { name: 'Esporta in un file TXT', value: 'export' },
-                    { name: 'Nessuna azione', value: 'none' }
+                    { name: 'Copy the output text', value: 'copy' },
+                    { name: 'Export to a TXT file', value: 'export' },
+                    { name: 'No action', value: 'none' }
                 ],
             },
         ]);
 
         if (action === 'copy') {
             clipboardy.writeSync(printDirectoryTree(directory));
-            console.log(chalk.green('✔️ Testo copiato negli appunti!'));
+            console.log(chalk.green('✔️ Text copied to clipboard!'));
         } else if (action === 'export') {
             const filePath = path.join(directory, 'directory_structure.txt');
             fs.writeFileSync(filePath, printDirectoryTree(directory));
-            console.log(chalk.green('✔️ Struttura della directory esportata in ${filePath}'));
+            console.log(chalk.green(`✔️ Directory structure exported to ${filePath}`));
         } else {
-            console.log(chalk.yellow('Nessuna azione selezionata.'));
+            console.log(chalk.yellow('No action selected.'));
         }
     } catch (err) {
-        console.error(chalk.red('Errore durante l\'interazione con l\'utente: ${err.message}'));
+        console.error(chalk.red(`Error during user interaction: ${err.message}`));
     }
 };
 
-// Avvia l'esecuzione della funzione principale
+// Start executing the main function
 main();

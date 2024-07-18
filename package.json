@@ -1,14 +1,12 @@
 {
   "name": "rootie",
   "version": "1.0.0",
-  "description": "Rootie è un'applicazione per la gestione e la visualizzazione della struttura delle directory, progettata per offrire una rappresentazione visiva chiara e dettagliata della gerarchia dei file nel tuo sistema.",
+  "description": "Rootie is a CLI application that allows you to view the structure of a chosen directory.",
   "type": "module",
   "main": "index.mjs",
   "scripts": {
     "start": "node ./src/index.mjs",
-    "build-windows": "",
-    "build-linux": "",
-    "build-macos": "",
+    "build": "ncc build src/index.mjs -o dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -17,9 +15,10 @@
     "clipboardy": "^4.0.0",
     "fs-extra": "^11.2.0",
     "inquirer": "^8.2.4",
-    "strip-ansi": "7.1.0"
+    "strip-ansi": "7.1.0",
+    "vercel": "35.0.3"
   },
-  "author": "Sladix784",
+  "author": "Ornitorink0",
   "license": "ISC",
   "nexe": {
     "input": "./src/index.mjs",

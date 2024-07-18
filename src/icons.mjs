@@ -1,5 +1,5 @@
 /**
- * Icone per i diversi tipi di file basati sull'estensione del file o nomi speciali.
+ * Icons for different file types based on file extension or special names.
  * @type {Object.<string, string>}
  */
 export const ICONS = {

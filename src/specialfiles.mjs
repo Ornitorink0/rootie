@@ -1,4 +1,4 @@
-// Colorazione per file speciali come README, CHANGELOG e altri
+// Coloring for special files like README, CHANGELOG and others
 export const specialFiles = [
     'README',
     'README.md',
