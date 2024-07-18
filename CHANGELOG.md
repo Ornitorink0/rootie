@@ -9,6 +9,22 @@
 * [ ] Support for symbolic links in the directory structure.
 * [ ] Ability to customize icons and colors via configuration file.
 
+
+
+## [1.1.1] - 18-07-2024
+
+### Added
+
+- LICENSE file.
+
+### Changed
+
+- Removed unless files.
+
+### Fixed
+
+- N / A
+
 ## [1.1.0] - 18-07-2024
 
 ### Added
