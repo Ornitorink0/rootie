@@ -4,6 +4,8 @@
 
 Additionally, the app offers practical features such as clipboard saving and exporting to a text file, simplifying the process of documenting file structures.
 
+![rootie Manifest](./img/rootie-manifest.png)
+
 ## Features
 
 - **Icon Management**: Easily manage different icon formats including ICO, PNG, and SVG.
