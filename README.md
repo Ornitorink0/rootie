@@ -83,4 +83,4 @@ Contributions are welcome! Please create a pull request with a clear description
 
 ## License
 
-This project is licensed under the ISC License. See LICENSE file.
+This project is licensed under the GNU GPLv3 License. See LICENSE file.
