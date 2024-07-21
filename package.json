@@ -16,10 +16,10 @@
     "fs-extra": "^11.2.0",
     "inquirer": "^8.2.4",
     "strip-ansi": "7.1.0",
-    "vercel": "35.0.3"
+    "vercel": "^32.3.0"
   },
   "author": "Ornitorink0",
-  "license": "ISC",
+  "license": "GNU GPLv3",
   "nexe": {
     "input": "./src/index.mjs",
     "output": "./dist/index.exe",
