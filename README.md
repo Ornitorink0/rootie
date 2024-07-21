@@ -79,7 +79,7 @@ rootie/
 
 ## Contributing
 
-Contributions are welcome! Please create a pull request with a clear description of your changes.
+Contributions are welcome! Create a pull request with a clear description of the changes, but in a new branch. Once the request is made and the code is reviewed, the code will be implemented in the `main` branch.
 
 ## License
 
