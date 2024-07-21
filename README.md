@@ -8,9 +8,9 @@ Additionally, the app offers practical features such as clipboard saving and exp
 
 ## Features
 
-- **Icon Management**: Easily manage different icon formats including ICO, PNG, and SVG.
-- **File Handling**: Handle special files with specific requirements.
-- **Cross-Platform Builds**: Create executable files for Windows, Linux, and macOS.
+- **Display** of the directory of your choice
+- **Copy** to tree clipboard
+- **Export** to tree `.txt` file
 
 ## Installation
 
